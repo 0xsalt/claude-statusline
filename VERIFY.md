@@ -31,7 +31,7 @@ MCPs: (none or your configured MCPs)
 System: vm · 8 cores · 1.6Gi/16Gi mem · 45G/100G disk · load 0.95/0.81/0.91
 ```
 
-**With customization (DA_NAME + LOCATION):**
+**With customization (example: DA_NAME="Aria", LOCATION="Home Lab"):**
 ```
 Aria at Home Lab · CC ?.?.? · Unknown · [~] · (:)
 Context: ◾◾◾◾◾◾◾◾◾◾ 0% · Usage: 5h: 15% (4h 30m) · 7d: 45%/42% (3d 15h)
