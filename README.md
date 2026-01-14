@@ -1,18 +1,8 @@
----
-name: Claude Statusline
-pack-id: claude-statusline-v1.1.0
-version: 1.1.0
-author: 0xsalt
-description: Custom statusline for Claude Code with usage tracking, context display, and system stats
-type: feature
-purpose-type: [ui, monitoring]
-platform: claude-code
-dependencies: []
-keywords: [statusline, usage, context, monitoring, display, claude-code]
-license: MIT
----
-
 # Claude Statusline
+
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Claude%20Code-purple.svg)](https://claude.ai/code)
 
 > Custom multi-line statusline with Claude API usage tracking
 
