@@ -26,18 +26,20 @@ echo '{}' | bash ~/.claude/statusline-command.sh
 **Expected output (4 lines, default config):**
 ```
 Assistant · CC ?.?.? · Unknown · [~] · (:)
-Context: ◾◾◾◾◾◾◾◾◾◾ 0% · Usage: 5h: 15% (4h 30m) · 7d: 70% (15h 30m)
+Context: ◾◾◾◾◾◾◾◾◾◾ 0% · Usage: 5h: 15% (4h 30m) · 7d: 45%/42% (3d 15h)
 MCPs: (none or your configured MCPs)
 System: vm · 8 cores · 1.6Gi/16Gi mem · 45G/100G disk · load 0.95/0.81/0.91
 ```
 
-**With customization (DA_NAME="Kai", LOCATION="Home Lab"):**
+**With customization (DA_NAME + LOCATION):**
 ```
-Kai at Home Lab · CC ?.?.? · Unknown · [~] · (:)
-Context: ◾◾◾◾◾◾◾◾◾◾ 0% · Usage: 5h: 15% (4h 30m) · 7d: 70% (15h 30m)
+Aria at Home Lab · CC ?.?.? · Unknown · [~] · (:)
+Context: ◾◾◾◾◾◾◾◾◾◾ 0% · Usage: 5h: 15% (4h 30m) · 7d: 45%/42% (3d 15h)
 MCPs: Playwright, BrightData
 System: vm · 8 cores · 1.6Gi/16Gi mem · 45G/100G disk · load 0.95/0.81/0.91
 ```
+
+**Note:** The 7d usage shows `actual%/budget%` — green if under budget, red if over.
 
 ### 3. Test Usage Fetcher
 
@@ -47,7 +49,7 @@ bun run ~/.claude/lib/usage-fetcher.ts
 
 Expected output (JSON):
 ```json
-{"five_hour_pct":15,"seven_day_pct":70,"five_hour_reset":"4h 30m","seven_day_reset":"15h 30m"}
+{"five_hour_pct":15,"seven_day_pct":45,"five_hour_reset":"4h 30m","seven_day_reset":"3d 15h","seven_day_budget":42}
 ```
 
 Or if no OAuth token:
