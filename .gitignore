@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+*.env
+
+# Credentials (never commit)
+.credentials.json
+
+# Cache files
+.claude_usage_cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Private docs
+docs/internal/
