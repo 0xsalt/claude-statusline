@@ -10,7 +10,7 @@ All notable changes to claude-statusline will be documented in this file.
 - Support for `LOCATION` env var (generic alternative to `HOTEL`)
 
 ### Changed
-- Renamed pack from "Arcana Statusline" to "Claude Statusline" for public release
+- Renamed pack to "Claude Statusline" for public release
 - Location display is now conditional (only shows if `LOCATION` or `HOTEL` is set)
 - Updated documentation with generic examples
 - Configuration priority: statusline.env > env vars > defaults

@@ -47,26 +47,31 @@ Provides a comprehensive statusline for Claude Code:
 **Default (no customization):**
 ```
 Assistant · CC 2.1.1 · Opus · [project] · (repo:branch)
-Context: ◽◽◽◾◾◾◾◾◾◾ 30% · Usage: 5h: 15% (4h 30m) · 7d: 70% (15h 30m)
+Context: ◽◽◽◾◾◾◾◾◾◾ 30% · Usage: 5h: 15% (4h 30m) · 7d: 45%/42% (3d 15h)
 MCPs: Playwright, BrightData
 System: vm · 8 cores · 1.6Gi/16Gi mem · 45G/100G disk · load 0.95/0.81/0.91
 ```
 
 **With customization (DA_NAME + LOCATION):**
 ```
-Kai at Home Lab · CC 2.1.1 · Opus · [project] · (repo:branch)
-Context: ◽◽◽◾◾◾◾◾◾◾ 30% · Usage: 5h: 15% (4h 30m) · 7d: 70% (15h 30m)
+Aria at Home Lab · CC 2.1.1 · Opus · [project] · (repo:branch)
+Context: ◽◽◽◾◾◾◾◾◾◾ 30% · Usage: 5h: 15% (4h 30m) · 7d: 45%/42% (3d 15h)
 MCPs: Playwright, BrightData
 System: vm · 8 cores · 1.6Gi/16Gi mem · 45G/100G disk · load 0.95/0.81/0.91
 ```
+
+**Usage format explained:**
+- `5h: 15% (4h 30m)` — 15% of 5-hour limit used, resets in 4h 30m
+- `7d: 45%/42% (3d 15h)` — 45% used vs 42% budget (on track), resets in 3d 15h
+  - Green: under budget | Red: over budget
 
 ## Customization
 
 Copy `statusline.env.template` to `~/.claude/statusline.env` and edit:
 
 ```bash
-# Your assistant's display name
-DA_NAME="Kai"
+# Your assistant's display name (e.g., "Claude", "Aria", "Helper")
+DA_NAME="YourAssistantName"
 
 # Display name color: purple/blue/green/cyan/yellow/orange
 DA_COLOR="cyan"
