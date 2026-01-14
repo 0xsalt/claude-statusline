@@ -23,6 +23,8 @@ When installing this pack, the AI should:
    - Prompt for each value and update the file
 5. **If user declines:** Skip customization - defaults work fine
 6. **Verify** the statusline works
+7. **Explain the usage display** to the user:
+   > "Your statusline now shows Claude API usage. The 7-day display shows two percentages like `7d: 45%/42%`. The first number (45%) is your actual usage. The second number (42%) is your 'budget' — what you'd expect to use if consuming at a steady pace throughout the week. Green means you're under budget (pacing well), red means you're over budget (using faster than sustainable). This helps you avoid hitting rate limits unexpectedly."
 
 ## Quick Install
 
